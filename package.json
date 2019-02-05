@@ -15,12 +15,12 @@
   },
   "private": false,
   "author": {
-    "name": "Richard Jeffords",
-    "email": "rajeffords@gmail.com",
-    "url": "https://richard.pizza"
+    "name": "Mostafa Raafat",
+    "email": "mraafatsaad94@gmail.com",
+    "url": "https://intouch.com"
   },
   "bugs": {
-    "url": "https://github.com/dockleryxk/ng-simple-slideshow/issues"
+    "url": "https://github.com/mostafa-raafat/ng-simple-slideshow/issues"
   },
   "dependencies": {
     "@angular/common": "6.0.1",
@@ -60,7 +60,7 @@
   },
   "deprecated": false,
   "description": "A simple, responsive slideshow for Angular 4+.",
-  "homepage": "https://github.com/dockleryxk/ng-simple-slideshow",
+  "homepage": "https://github.com/mostafa-raafat/ng-simple-slideshow",
   "keywords": [
     "angular",
     "angular 2",
@@ -83,6 +83,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dockleryxk/ng-simple-slideshow.git"
+    "url": "git+https://github.com/mostafa-raafat/ng-simple-slideshow.git"
   }
 }
