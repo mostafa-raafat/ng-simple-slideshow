@@ -1,6 +1,6 @@
 {
   "name": "intouch-screensaver",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT",
   "private": false,
   "author": {
@@ -41,9 +41,9 @@
     "type": "git",
     "url": "git+https://github.com/mostafa-raafat/ng-simple-slideshow.git"
   },
-  "main": "bundles/ng-simple-slideshow.umd.js",
-  "module": "ng-simple-slideshow.es5.js",
-  "es2015": "ng-simple-slideshow.js",
-  "typings": "ng-simple-slideshow.d.ts",
-  "metadata": "ng-simple-slideshow.metadata.json"
+  "main": "bundles/intouch-screensaver.umd.js",
+  "module": "intouch-screensaver.es5.js",
+  "es2015": "intouch-screensaver.js",
+  "typings": "intouch-screensaver.d.ts",
+  "metadata": "intouch-screensaver.metadata.json"
 }
