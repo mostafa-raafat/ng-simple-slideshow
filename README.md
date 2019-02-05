@@ -25,13 +25,13 @@ A simple slideshow for Angular 4+.
 Easy, just npm install:
 
 ```shell
-npm i -S ng-simple-slideshow
+npm i -S intouch-screensaver
 ```
 
 Next, import the module:
 
 ```
-import {SlideshowModule} from 'ng-simple-slideshow';
+import {SlideshowModule} from 'intouch-screensaver';
 
 @NgModule({
   imports: [
@@ -71,7 +71,7 @@ A more complex example of how I use this in one of my own projects (full list of
 
 ### More Info on imageUrls
 
-The imageUrls input can be an array of strings, however in order to enable slides to have links, captions, or custom click functions, you must use an object of type [IImage](https://github.com/dockleryxk/ng-simple-slideshow/blob/master/src/app/modules/slideshow/IImage.ts) instead of a string. For example usage, [see here](https://github.com/dockleryxk/ng-simple-slideshow/blob/master/src/app/app.component.ts#L8).
+The imageUrls input can be an array of strings, however in order to enable slides to have links, captions, or custom click functions, you must use an object of type [IImage](https://github.com/mostafa-raafat/ng-simple-slideshow/blob/master/src/app/modules/slideshow/IImage.ts) instead of a string. For example usage, [see here](https://github.com/mostafa-raafat/ng-simple-slideshow/blob/master/src/app/app.component.ts#L8).
 
 ## Options
 
@@ -79,7 +79,7 @@ The imageUrls input can be an array of strings, however in order to enable slide
 
 | Option                  | Required | Default              | Type                                                                                                                      | Description                                                                                                                        |
 | ----------------------- | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| imageUrls               | yes      | []                   | string[] or [IImage[]](https://github.com/dockleryxk/ng-simple-slideshow/blob/master/src/app/modules/slideshow/IImage.ts) | array of image urls or [IImage](https://github.com/dockleryxk/ng-simple-slideshow/blob/master/src/app/modules/slideshow/IImage.ts) |
+| imageUrls               | yes      | []                   | string[] or [IImage[]](https://github.com/mostafa-raafat/ng-simple-slideshow/blob/master/src/app/modules/slideshow/IImage.ts) | array of image urls or [IImage](https://github.com/mostafa-raafat/ng-simple-slideshow/blob/master/src/app/modules/slideshow/IImage.ts) |
 | height                  | no       | '100%'               | string                                                                                                                    | CSS height of slideshow                                                                                                            |
 | minHeight               | no       |                      | string                                                                                                                    | CSS min-height of slideshow                                                                                                        |
 | arrowSize               | no       | '30px'               | string                                                                                                                    | length of arrow lines                                                                                                              |
