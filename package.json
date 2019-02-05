@@ -1,6 +1,6 @@
 {
-  "name": "ng-simple-slideshow",
-  "version": "1.2.7",
+  "name": "intouch-screensaver",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "dist-package": "rm dist/package.json && cp dist-package.json dist/package.json",
     "packagr": "rm -rf .ng_build dist && ng-packagr -p ng-package.json && npm run dist-package",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "npm run build"
   },
   "private": false,
   "author": {
