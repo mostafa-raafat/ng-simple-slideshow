@@ -33,7 +33,7 @@
     </div>
     <div *ngIf="slide.image.type === 'video'">
       <video  autoplay muted onloadedmetadata="this.muted = true"
-      class="slides"
+      class="slides none"
       [attr.href]="slide?.image?.href || undefined"
       [class.selected]="slide?.selected"
       [class.hide-slide]="!slide?.selected && !slide?.leftSide && !slide?.rightSide"
