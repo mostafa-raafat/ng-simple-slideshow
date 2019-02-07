@@ -3,32 +3,53 @@
      (touchend)="onSwipe($event, 'end')"
      class="slideshow-container">
   <!-- slides -->
-  <a *ngFor="let slide of slides; index as i; trackBy: trackByFn"
-     class="slides"
-     [attr.href]="slide?.image?.href || undefined"
-     title="{{slide?.image?.title}}"
-     [ngStyle]="getSlideStyle(i)"
-     [class.selected]="slide?.selected"
-     [class.hide-slide]="!slide?.selected && !slide?.leftSide && !slide?.rightSide"
-     [class.left-side]="slide?.leftSide"
-     [class.right-side]="slide?.rightSide"
-     [class.slide-in-left]="slide?.action === 'slideInLeft'"
-     [class.slide-in-right]="slide?.action === 'slideInRight'"
-     [class.slide-out-left]="slide?.action === 'slideOutLeft'"
-     [class.slide-out-right]="slide?.action === 'slideOutRight'"
-     [class.link]="slide?.image?.clickAction || slide?.image?.href"
-     (click)="onClick($event)">
-    <div class="loader"
-         *ngIf="!slide?.loaded"></div>
-    <div *ngIf="showCaptions && slide?.image?.caption"
-         class="caption"
-         [ngStyle]="{
-           'color': captionColor,
-           'background-color': captionBackground
-          }"
-         [innerHTML]="slide?.image?.caption">
+
+  <div *ngFor="let slide of slides; index as i; trackBy: trackByFn">
+    <div *ngIf="slide.image.type === 'image' || slide.image.type === undefined">
+      <a  class="slides"
+      [attr.href]="slide?.image?.href || undefined"
+      title="{{slide?.image?.title}}"
+      [ngStyle]="getSlideStyle(i)"
+      [class.selected]="slide?.selected"
+      [class.hide-slide]="!slide?.selected && !slide?.leftSide && !slide?.rightSide"
+      [class.left-side]="slide?.leftSide"
+      [class.right-side]="slide?.rightSide"
+      [class.slide-in-left]="slide?.action === 'slideInLeft'"
+      [class.slide-in-right]="slide?.action === 'slideInRight'"
+      [class.slide-out-left]="slide?.action === 'slideOutLeft'"
+      [class.slide-out-right]="slide?.action === 'slideOutRight'"
+      [class.link]="slide?.image?.clickAction || slide?.image?.href"
+      (click)="onClick($event)">
+        <div class="loader" *ngIf="!slide?.loaded"></div>
+        <div *ngIf="showCaptions && slide?.image?.caption"
+              class="caption"
+              [ngStyle]="{
+                'color': captionColor,
+                'background-color': captionBackground
+              }"
+              [innerHTML]="slide?.image?.caption">
+        </div>
+      </a>
     </div>
-  </a>
+    <div *ngIf="slide.image.type === 'video'">
+      <video  autoplay muted onloadedmetadata="this.muted = true"
+      class="slides"
+      [attr.href]="slide?.image?.href || undefined"
+      [class.selected]="slide?.selected"
+      [class.hide-slide]="!slide?.selected && !slide?.leftSide && !slide?.rightSide"
+      [class.left-side]="slide?.leftSide"
+      [class.right-side]="slide?.rightSide"
+      [class.slide-in-left]="slide?.action === 'slideInLeft'"
+      [class.slide-in-right]="slide?.action === 'slideInRight'"
+      [class.slide-out-left]="slide?.action === 'slideOutLeft'"
+      [class.slide-out-right]="slide?.action === 'slideOutRight'"
+      [class.link]="slide?.image?.clickAction || slide?.image?.href"
+      (click)="onClick($event)">
+        <source [src]="slide.image.url" type="video/mp4" />
+      </video>
+    </div>
+
+  </div>
   <!-- left arrow -->
   <div [class.display-none]="!this.showArrows"
        (click)="onSlide(-1)"

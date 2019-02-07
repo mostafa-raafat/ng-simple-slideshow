@@ -1,5 +1,6 @@
 export interface IImage {
     url: string | null;
+    type?: string;
     href?: string;
     clickAction?: Function;
     caption?: string;
